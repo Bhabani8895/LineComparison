@@ -1,10 +1,9 @@
 ﻿using System;
-//using System.Math;
-using static System.Math;
-
+using System.Collections.Generic;
+using System.Text;
 namespace LineComparison
 {
-    class Program1
+    class Program2
 
     {
         public static void Main(string[] args)
@@ -19,11 +18,17 @@ namespace LineComparison
             Console.Write("Enter any  value y2: ");
             double y2 = Convert.ToDouble(Console.ReadLine());
 
+            //if else statement
+            if (x1 == x2 && y1 == y2)
+            {
+                Console.WriteLine("Two lines are equal");
+            }
+            else
+            {
+                Console.WriteLine("Two lines are not equal");
+            }
 
-            double distance = Convert.ToDouble(Console.Read());
-            //using distance formula to find out distance
-            distance = Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-            Console.WriteLine(distance);
+
             Console.ReadKey();
         }
     }
